@@ -1,0 +1,39 @@
+<button onclick="moveLeft();drawMap()">◄</button>
+<span id="gameMap"></span>
+<button onclick="moveRight();drawMap()">►</button>
+
+<script>
+
+    const LEN = 20
+    let rx = 10
+
+    function drawMap() {
+        gameMap.innerHTML = ""
+        for(let x=1; x<=LEN; x++) {
+            if(x==rx) {
+                gameMap.innerHTML += "►"
+            } else {
+                gameMap.innerHTML += "┄"
+            }
+        }
+    }
+
+    function moveLeft() {
+        rx--
+        if (rx<=0) {
+            rx = LEN
+            // rx = 1 varianta cu stop la capatalul hartii
+        }
+    }
+
+    function moveRight() {
+        rx++
+        if (rx>LEN) {
+            rx = 1
+            // rx = LEN varianta cu stop la capatalul hartii
+        }
+    }
+
+    drawMap()
+
+</script>

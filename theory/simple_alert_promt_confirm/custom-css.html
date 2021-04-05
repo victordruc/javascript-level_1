@@ -1,0 +1,18 @@
+<script>
+
+    color = prompt("Enter color name or code")
+    size = prompt("Enter size in pixels")
+    borderSize = prompt("Enter border size")
+    borderColor = prompt("Enter border color")
+
+    document.write(
+        `<div style="
+            background: ${color};
+            width: ${size}px;
+            height: ${size}px;
+            border: ${borderSize}px ${borderColor} solid;"
+        >
+        </div>`
+    )
+
+</script>

@@ -1,0 +1,23 @@
+<script>
+
+    //declaration constant break-point
+    const BREACK_POINT_XSM = 560
+    const BREACK_POINT_SM = 980
+    const BREACK_POINT_MD = 1200
+    const BREACK_POINT_LG = 3000
+
+    let windowWidth = innerWidth
+
+    if (windowWidth <= BREACK_POINT_XSM && windowWidth > 60) {
+        alert("Display: extra small size " + windowWidth)
+    } else if (windowWidth <= BREACK_POINT_SM && windowWidth > BREACK_POINT_XSM) {
+        alert("Display: small size " + windowWidth)
+    } else if (windowWidth <= BREACK_POINT_MD && windowWidth > BREACK_POINT_SM) {
+        alert("Display: medium size " + windowWidth)
+    } else if (windowWidth <= BREACK_POINT_LG && windowWidth > BREACK_POINT_MD) {
+        alert("Display: large size " + windowWidth)
+    } else {
+        alert("Error, the display is not in the parameters!!!")
+    }
+
+</script>

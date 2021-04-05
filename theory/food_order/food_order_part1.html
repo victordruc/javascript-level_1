@@ -1,0 +1,67 @@
+<script>
+
+    //list food:
+
+    food_1_name  = "Pizza"
+    food_1_price = 75.00
+    food_2_name  = "Salad"
+    food_2_price = 25.00
+    food_3_name  = "Meat"
+    food_3_price = 90.00
+    food_4_name  = "Fish"
+    food_4_price = 80.00
+
+    //menu list:
+
+    alert(
+        `
+        ################# FOOD ##################
+        1. "${food_1_name}"  ${food_1_price.toFixed(2)}
+        2. "${food_2_name}"  ${food_2_price.toFixed(2)}
+        3. "${food_3_name}"  ${food_3_price.toFixed(2)}
+        4. "${food_4_name}"  ${food_4_price.toFixed(2)}
+        ################# FOOD ##################
+        `
+    )
+
+    //QTY:
+
+    food_1_quantity = parseInt( prompt(`How many "${food_1_name}" do you want?`) )
+    food_2_quantity = parseInt( prompt(`How many "${food_2_name}" do you want?`) )
+    food_3_quantity = parseInt( prompt(`How many "${food_3_name}" do you want?`) )
+    food_4_quantity = parseInt( prompt(`How many "${food_4_name}" do you want?`) )
+
+    /* parseInt intoarce un numar care este interpretat ca text, de exemplu "200px" va intoarce ca 200,
+    citirea se va opri la primul text gasit, principalul ca valoarea sa nu sa se inceapa cu litere, 
+    la fel in cazul nostru il vom utiliza pentru a ne intoarce un numar intreg: "2.5" => 2 */
+
+    // ${identifier} are rolul de-a afisa faloarea variabilei declarate mai sus
+
+    //cost:
+
+    cost_1 = food_1_price * food_1_quantity
+    cost_2 = food_2_price * food_2_quantity
+    cost_3 = food_3_price * food_3_quantity
+    cost_4 = food_4_price * food_4_quantity
+
+    costTotal = cost_1 + cost_2 + cost_3 + cost_4
+
+    free_delivery = costTotal > 200
+
+    //nota:
+
+    alert(
+        `
+        ############### BILL ####################
+        1. "${food_1_name}" X  ${food_1_quantity} = ${cost_1.toFixed(2)}
+        2. "${food_2_name}" X ${food_2_quantity} = ${cost_2.toFixed(2)}
+        3. "${food_3_name}" X ${food_3_quantity} = ${cost_3.toFixed(2)}
+        4. "${food_4_name}" X ${food_4_quantity} = ${cost_4.toFixed(2)}
+        -----------------------------------------
+        total: ${costTotal.toFixed(2)}
+        free delivery: ${free_delivery}
+        ############### BILL ####################
+        `
+    )
+
+</script>

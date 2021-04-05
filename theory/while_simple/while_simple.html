@@ -1,0 +1,29 @@
+<script>
+
+let n = 1
+while (n <=10 ) {
+  console.log( n )
+  n++ //postfix increment
+}
+
+/* In cazul de mai sus utilizam ciclul while care ne va afisa in console.log valoarea variabilei n crescind cu o unitate (utilizind postfix increment n++) pina cind conditia n<=10 nu va fi false, 1...10, daca ne vom adresa inca odata dupa ciclu la valoarea variabilei n atunci vom vedea ca valoarea ei deja este 11 deoarece incrementare lui n a avut loc dupa console.log si anume aceasta valoare se verifica la conditia while, in cazul dat 11<=10 => false, se vede in exemplul de mai jos */
+
+console.log( "verificare:" )
+let a = 1
+while (a <=10 ) {
+  console.log( a )
+  a++ //postfix increment
+  //console.log( a ) - se poate si aici de verificat
+}
+console.log( a )
+
+// actiunea inversa:
+
+console.log( "actiunea inversa:" )
+let b = 10
+while (b >=1 ) {
+  console.log( b )
+  b-- //postfix decrement
+}
+
+</script>

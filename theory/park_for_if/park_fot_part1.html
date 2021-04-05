@@ -1,0 +1,43 @@
+<script>
+
+    const PARKING_PLACES = 7
+    let freePlace = 3
+
+    let decor = ""
+    for (let x = 1; x <= PARKING_PLACES * 5; x++) {
+        decor += "#"
+    }
+    console.log(decor)
+
+    let places = ""
+    for (let x = 1; x <= PARKING_PLACES; x++) {
+        if ( x == freePlace ) {
+            places += "|   |"
+        } else {
+            places += "| X |"
+        }  
+    }
+    console.log(places)
+
+    decor = ""
+    for (let x = 1; x <= PARKING_PLACES * 5; x++) {
+        decor += "#"
+    }
+    console.log(decor)
+
+    // Raspunsuri:
+    // 1. In cazul dat variabilele decor si places declara o valoare care ulterior prin ajutorul ciclului for ne deseneaza harta parcarii.
+
+    // 2. Cele doua valori sunt declarate pina la ciclu deoarece daca vor fi declarate in interiorul unui ciclu, sau functie, sau au altei operatiuni care va detine un oarecare corp notate prin {}, nu va fi posibil de afisat valoare sa din afara acestei operatiuni, un exemplu urmeaza mai jos:
+    let a = "test in afara corpului"
+    {
+        let a = "test in corp"
+        console.log(a)
+    }
+    console.log(a)
+    // Dupa cum vedem mai sus variabila "a" declarata in {} si in afara, sunt doua variabile diferita, de aceea mai intii se declara variabila apoi se rescrie.
+
+    // 3. cons - reprezinta o constanta, aceeasta inseamna ca voarea ei nu trebuie schimbata pe parcurul intregului cod, sintaxa sa difera deoarece a fost o intelege pina la existenta declaratiei const, prin care se spune ca toate constantele se scriu cu litere mari, astfel aduce la cunostinta celor care deservesc codul ca valoarea acesteia nu trebuie schimbata, P.S. codul fizic functioneaza chiar daca constanta se declara cu litere mici.
+
+</script>
+

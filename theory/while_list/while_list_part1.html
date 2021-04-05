@@ -1,0 +1,30 @@
+<script>
+
+    let item = 1
+    let day = ""
+
+    document.write(`<ul>`)
+    while (item <= 7) {
+        if (item === 1) {
+            day = "Monday"
+        } else if (item === 2) {
+            day = "Tuesday"
+        } else if (item === 3) {
+            day = "Wednesday"
+        } else if (item === 4) {
+            day = "Tursday"
+        } else if (item === 5) {
+            day = "Friday"
+        } else if (item === 6) {
+            day = "Saturday"
+        } else if (item === 7) {
+            day = "Sunday"
+        } else {
+            day = ""
+        }
+        document.write(`<li>${item}. ${day}</li>`)
+        item++
+    }
+    document.write(`</ul>`)
+
+</script>

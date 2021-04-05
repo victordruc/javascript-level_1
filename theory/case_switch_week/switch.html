@@ -1,0 +1,32 @@
+<script>
+
+    let day = parseInt(prompt("Day of the week?"))
+    let weekStart = (prompt("Insert start day of the week, Monday or Sunday?")).toLocaleLowerCase()
+
+    if (weekStart == "monday") {
+        switch (day) {
+            case 1: document.write("Mo"); break
+            case 2: document.write("Tu"); break
+            case 3: document.write("Wd"); break
+            case 4: document.write("Th"); break
+            case 5: document.write("Fr"); break
+            case 6: document.write("Sa"); break
+            case 7: document.write("Su"); break
+            default: document.write("Don't have this day"); break
+        }
+    } else if (weekStart == "sunday") {
+        switch (day) {
+            case 1: document.write("Su"); break
+            case 2: document.write("Mo"); break
+            case 3: document.write("Tu"); break
+            case 4: document.write("Wd"); break
+            case 5: document.write("Th"); break
+            case 6: document.write("Fr"); break
+            case 7: document.write("Sa"); break
+            default: document.write("Don't have this day"); break
+        }
+    } else {
+        document.write("Insert please Monday or Sunday");
+    }
+
+</script>

@@ -1,0 +1,41 @@
+<script>
+    //declaration value
+    a = +prompt("Enter \"A\" value")
+    b = +prompt("Enter \"B\" value")
+
+    alert(
+        "############ VALUES ############" +
+        "\na = " + a +
+        "\nb = " + b +
+        "\n########## OPERATIONS ##########" +
+        "\na * b = " + a*b +
+        "\na / b = " + a/b +  
+        "\na + b = " + (a+b) +
+        "\na - b = " + (a-b) +
+        "\n#############################"
+    )
+
+    document.write (
+        `<div style="text-align: center; background: #BBB">
+            
+            <h2>############ VALUES ############</h2>
+            <p>
+                a = ${a}
+                </br>
+                b = ${b}
+            </p>
+            <h2>############ OPERATION ############</h2>
+            <p>
+                a * b= ${a*b}
+                </br>
+                a / b = ${a/b}
+                </br>
+                a + b= ${a+b}
+                </br>
+                a - b = ${a-b}
+            </p>
+            <h2>########################</h2>
+
+        </div>`
+    )
+</script>

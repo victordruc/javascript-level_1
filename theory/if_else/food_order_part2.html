@@ -1,0 +1,99 @@
+<script>
+
+    //list food:
+
+   let food_1_name  = "Pizza"
+   let food_1_price = 75.00
+   let food_1_availQty = 4
+   let food_2_name  = "Salad"
+   let food_2_price = 25.00
+   let food_2_availQty = 10
+   let food_3_name  = "Meat"
+   let food_3_price = 90.00
+   let food_3_availQty = 8
+   let food_4_name  = "Fish"
+   let food_4_price = 80.00
+   let food_4_availQty = 16
+
+    //menu list:
+
+    alert(
+        `
+        ################# FOOD ##################
+        1. "${food_1_name}"  ${food_1_price.toFixed(2)}   Quantity availability: ${food_1_availQty}pcs
+        2. "${food_2_name}"  ${food_2_price.toFixed(2)}   Quantity availability: ${food_2_availQty}pcs
+        3. "${food_3_name}"  ${food_3_price.toFixed(2)}   Quantity availability: ${food_3_availQty}pcs
+        4. "${food_4_name}"  ${food_4_price.toFixed(2)}   Quantity availability: ${food_4_availQty}pcs
+        ################# FOOD ##################
+        `
+    )
+
+    //QTY:
+
+    let food_1_quantity = parseInt( prompt(`How many "${food_1_name}" do you want?`) )
+    let food_2_quantity = parseInt( prompt(`How many "${food_2_name}" do you want?`) )
+    let food_3_quantity = parseInt( prompt(`How many "${food_3_name}" do you want?`) )
+    let food_4_quantity = parseInt( prompt(`How many "${food_4_name}" do you want?`) )
+
+    //cost:
+
+    let cost_1 = 0
+    let cost_2 = 0
+    let cost_3 = 0
+    let cost_4 = 0
+
+    if (food_1_availQty >= food_1_quantity) {
+        cost_1 = food_1_price * food_1_quantity
+    } else {
+        alert(`We have only: ${food_1_availQty}pcs of "${food_1_name}"`)
+        food_1_quantity = 0
+    }
+
+    if (food_2_availQty >= food_2_quantity) {
+        cost_2 = food_2_price * food_2_quantity
+    } else {
+        alert(`We have only: ${food_2_availQty}pcs of "${food_2_name}"`)
+        food_2_quantity = 0
+    }
+
+    if (food_3_availQty >= food_3_quantity) {
+        cost_3 = food_3_price * food_3_quantity
+    } else {
+        alert(`We have only: ${food_3_availQty}pcs of "${food_3_name}"`)
+        food_3_quantity = 0
+    }
+
+    if (food_4_availQty >= food_4_quantity) {
+        cost_4 = food_4_price * food_4_quantity
+    } else {
+        alert(`We have only: ${food_4_availQty}pcs of "${food_4_name}"`)
+        food_4_quantity = 0
+    }
+
+    let costTotal = cost_1 + cost_2 + cost_3 + cost_4
+
+    //delivery:
+
+    let free_delivery = "for delivery you need pay 20"
+
+    if (costTotal > 200) {
+        free_delivery = "you have purchased more than 200 and delivery is free"
+    }
+
+    //nota:
+
+    alert(
+        `
+        ############### BILL ####################
+        1. "${food_1_name}" X  ${food_1_quantity} = ${cost_1.toFixed(2)}
+        2. "${food_2_name}" X ${food_2_quantity} = ${cost_2.toFixed(2)}
+        3. "${food_3_name}" X ${food_3_quantity} = ${cost_3.toFixed(2)}
+        4. "${food_4_name}" X ${food_4_quantity} = ${cost_4.toFixed(2)}
+        -----------------------------------------
+        total: ${costTotal.toFixed(2)}
+        free delivery: ${free_delivery}
+        ############### BILL ####################
+        `
+    )
+
+</script>

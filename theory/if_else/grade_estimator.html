@@ -1,0 +1,46 @@
+<script>
+
+    //HW2:-------------------
+    /*
+    parseInt(9.9)
+    parseInt(9.1) 
+    parseInt(9.5) 
+    parseInt(9.59)
+        Cele scrise mai sus ne va intoarce cifra 9, 
+        deoarece se ia faloarea pina la virgula, adica numarul intreg (de la parse INT(intreg)), pentru virgula
+        avem nevoie de parseFloat(). 
+    */
+
+    //HW3:--------------------
+
+    //1..4 - very bad
+    //5..6 - bad
+    //7..8 - ok
+    //9 - good
+    //10 - excellent
+
+    let grade = parseInt(prompt("Your grade please: "))
+
+    if (grade > 10) {
+        alert("You need to insert in diapason: 1 => 10")
+    } else if (grade == 10) {
+        alert("EXCELENT")
+    } else if (grade == 9) {
+        alert("GOOD")
+    } else if (grade >= 7) {
+        if (grade <= 8) {
+            alert("OK")
+        }
+    } else if (grade >= 5) {
+        if (grade <= 6) {
+            alert("BAD")
+        }
+    } else if (grade >= 1) {
+        if (grade <= 4) {
+            alert("VERY BAD")
+        }
+    } else {
+        alert("You need to insert in diapason: 1 => 10")
+    }
+    
+</script>

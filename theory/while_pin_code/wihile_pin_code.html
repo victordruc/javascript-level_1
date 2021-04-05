@@ -1,0 +1,50 @@
+<script>
+
+    const PIN = "1111"
+
+    let pin = ""
+    let tries = 0
+    let balance = 1000000.00
+
+    while (true) {
+
+        pin = prompt("ENTER PIN: ")
+
+        tries++
+
+        if (pin == PIN) {
+            alert(`
+            ACCESS GRANTED!!!\n
+            your balance: ${balance}MDL
+            `)
+            //-------------Check balance--------------
+            while (true) {
+                let money = +prompt("WITHDRAW: ?\nFor exit press any key")
+
+                if (money > 50000) {
+                    alert(`Max cash select: 50000`)
+                } else if (money > balance) {
+                    alert(`You don't have enough money`)  
+                } else if (money > 0) {
+                    balance -= money
+                    alert(`
+                       SUCCESS!!!\n
+                     your balance: ${balance}MDL
+                     `)
+                    break
+                } else {
+                    break
+                }
+            //-------------Check balance--------------
+            }
+            break
+        } else {
+            alert("ACCES DENIED!!!")
+            if (tries == 3) {
+                alert("CARD BLOCKED!!!")
+                break
+            }
+        }
+    }
+
+</script>
