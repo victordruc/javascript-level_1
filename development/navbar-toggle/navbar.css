@@ -1,0 +1,64 @@
+body {
+    background: #223;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    background-color: #112;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+}
+
+#navbar {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+#navbar a {
+    color: white;
+    font-size: 1.25em;
+    padding: .5em;
+}
+
+.toggler {
+    font-size: 1.8em;
+    color: white;
+    background-color: transparent;
+    border: none;
+}
+
+.toggler span {
+    font-size: 0.4em;
+    background-color: #112;
+    position: relative;
+    bottom: 0.5em;
+    left: 0.8em;
+    padding: 1px 3px;
+    border-radius: 100%;
+}
+
+#navbarDrop {
+    position: absolute;
+    right: 0;
+    background-color: #112;
+}
+
+#navbarDrop a {
+    color: white;
+    padding: 1.38em;
+    display: block;
+    border-top: 1px white solid;
+}
+
+#navbarDrop a:first-child {
+    border-top: none;
+}
