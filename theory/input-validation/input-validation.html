@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Validation</title>
+    <style>
+        body {
+            background-color: #333;
+        }
+        #input_phone {
+            padding: 1em;
+        }
+    </style>
+</head>
+<body>
+    
+    <label>
+        <input type="text" id="input_phone" placeholder="enter phone" onkeyup="inputAdjust()" onclick="inputAdjust()" onkeydown="inputAdjust('del')">
+    </label>
+
+    <script>
+        function inputAdjust(del) {
+            let phone = input_phone.value
+            phone = phone.trim()
+            let lastC = phone[phone.length - 1]
+
+            if(lastC < "0" || lastC > "9") {
+                phone = phone.substring(0, phone.length - 1)
+            }
+
+            if(phone.length == 7 || phone.length == 11) {
+                phone += "-"
+            }
+            // HW1 - LIMIT
+            if(phone.length > 15) {
+                phone = phone.substring(0, phone.length - 1)
+            }
+            // BUG - Delete
+            if(event.key == "Backspace" && phone[phone.length-1] == "-" && del) {
+                phone = phone.substring(0, phone.length - 1)
+            }
+            // HW2 - PREFIX
+            if(phone.length < 4) {
+                phone = "022-"
+            }
+
+            input_phone.value = phone
+        }
+    </script>
+    
+</body>
+</html>
