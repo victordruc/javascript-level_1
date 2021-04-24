@@ -1,0 +1,26 @@
+img {
+    width: 60%;
+}
+
+i {
+    font-size: 1.4em;
+}
+
+.product:hover {
+    box-shadow: 5px 10px 15px #333;
+}
+
+.cartButton {
+    position: relative;
+}
+
+.qtyCart {
+    display: inline-block;
+    position: absolute;
+    font-size: 0.8em;
+    right: -8px;
+    background-color: #198754;
+    padding: .35em .65em;
+    line-height: 1;
+    border-radius: 100%;
+}
