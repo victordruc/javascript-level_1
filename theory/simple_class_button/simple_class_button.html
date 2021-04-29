@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Button Class Example</title>
+    <style>
+        .form {
+            border: 1px solid #999;
+            padding: 20px;
+        }
+
+        button,
+        input {
+            padding: 20px;
+        }
+
+        button.success {
+            background-color: green;
+            color: white
+        }
+
+        button.danger {
+            background-color: red;
+            color: white
+        }
+
+        button.warning {
+            background-color: orange;
+            color: white
+        }
+
+        button.disabled {
+            background-color: gray;
+            color: black
+        }
+
+        button.default {
+            background-color: white;
+            color: black
+        }
+    </style>
+</head>
+
+<body>
+
+    <form class="form">
+        <input type="text" placeholder="some dummy input">
+        <div id="actions">
+            <!-- insert buttons inside this element! -->
+        </div>
+    </form>
+
+    <script>
+
+        class Button {
+            constructor(text, type, action) {
+                this.text = text
+                if (type == "success" || type == "warning" || type == "disabled" || type == "danger") {
+                    this.type = type
+                } else {
+                    this.type = "default"
+                }
+                this.action = action
+            }
+
+            render(parrent_id) {
+                parrent_id.innerHTML += `
+                    <button class="${this.type}" onclick="${this.action}()">${this.text}</button> 
+                `
+            }
+
+        }
+
+        function okAction() {
+            alert("You've accepted")
+        }
+        function cancelAction() {
+            alert("You've canceled")
+        }
+
+        let okButton = new Button("OK", "success", "okAction")
+        let cancelButton = new Button("CANCEL", "danger", "cancelAction")
+
+        okButton.render(actions)
+        cancelButton.render(actions)
+
+    </script>
+</body>
+
+</html>
