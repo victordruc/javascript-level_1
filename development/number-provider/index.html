@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Provider</title>
+    <style>
+        p {
+            text-indent: 1em;
+            font-size: 1.4em;
+        }
+        code {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <p> In primul caz vom avea eroare deoarece prin apelarea metodei <code>start()</code> din constructor, cuvintul cheie this este echivalentul classei NumberProvider, astfel cautind <code>NumberProvider.positiveCB(number)</code> nu va gasi in el aceasta metoda de aceeia si apare eroarea: </p>
+        <img src="img/positiveCB_error.JPG" style="width: 400px; display: block;">
+    </div>
+
+    <hr>
+
+    <div>
+        <p> La crearea crearea functiei <code>positiveAction()</code> am creat o functie callBack, mai apoi in consola prin comanda <code>provider.whenPositive(positiveAction)</code> am apelat metoda whenPositive (trimitindui ca parametru functia creata) din classa NumberProvider, aceasta la rindul ei prin instructia <code>this.positiveCB = positiveCB</code> ii adauga classei metoda positiveCB care este echivalenta cu functia creata anterior, astfel dupa aceasta comanda classa deja are aceasta metoda si ulterior in metoda start ea poate fi accesata:</p>
+        <img src="img/positiveCB_noError.JPG" style="width: 400px; display: block;">
+    </div>
+
+    <hr>
+    
+    <script src="NumberProvider.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
